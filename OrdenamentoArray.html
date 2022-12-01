@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+
+var iteracoes = parseInt(prompt("Olá, seja bem vindo! Este algoritmo permite que você insira uma determinada quantidade de números e irá ordená-los de forma crescente. Por favor, digite quantos números você deseja inserir."));
+var listaNumeros = [];
+var maior = 0;
+
+for(let i = 0; i < iteracoes; i++) {
+    listaNumeros.push(parseInt(prompt("Digite um número para adicionar à lista.")));
+}
+
+for(i = 0; i < iteracoes - 1; i++) {
+    for(j = i + 1; j < iteracoes; j++){
+        if(listaNumeros[i] > listaNumeros[j]) {
+            maior = listaNumeros[i];
+            listaNumeros[i] = listaNumeros[j];
+            listaNumeros[j] = maior;
+        }
+    }           
+} 
+
+document.write(listaNumeros);
+
+</script>
